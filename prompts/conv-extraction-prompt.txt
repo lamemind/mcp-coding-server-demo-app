@@ -1,7 +1,0 @@
-ora salviamo la conversazione corrente per pubblicarla insieme al resto del progetto
-- fermati subito prima del presente messaggio
-- per ogni messaggio, riporta l'esatto testo integrale dell'utente e del bot
-- la conversazione deve essere in formato markdown
-- l'output deve essere scritto in un file con pattern `<numero_conversazione_2_cifre> <titolo conversazione>.md`
-- ottieni `numero_conversazione_2_cifre` facendo `directory_list` nella cartella `history` e contando quanti file ci sono +1
-
