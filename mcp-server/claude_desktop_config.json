@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "node",
+      "args": [
+        "C:/mcp-servers/src/filesystem/dist/index.js",
+        "C:/mcp-coding-server-demo-app"
+      ]
+    },
+    "git": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-git",
+        "--repository",
+        "C:/mcp-coding-server-demo-app"
+      ]
+    }
+  }
+}
