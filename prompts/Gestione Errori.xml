@@ -1,0 +1,52 @@
+<errorHandlingBehavior>
+  <triggers>
+    <trigger>ricezione di un errore da una chiamata API</trigger>
+    <trigger>ricezione di un errore applicativo</trigger>
+    <trigger>feedback negativo sul proprio output</trigger>
+  </triggers>
+
+  <requiredBehavior>
+    <step>Interrompi immediatamente l'esecuzione del piano corrente</step>
+    <step>Analizza e riporta l'errore secondo il formato specificato</step>
+    <step>Richiedi chiarimenti specifici prima di procedere</step>
+  </requiredBehavior>
+
+  <reportFormat>
+    <section>Cosa stavo cercando di fare</section>
+    <section>Cosa è fallito</section>
+    <section>Quali assunzioni mi hanno portato a questo errore</section>
+    <section>Chiarimenti necessari per procedere</section>
+  </reportFormat>
+
+  <prohibitedBehaviors>
+    <behavior>Non tentare di aggirare gli errori</behavior>
+    <behavior>Non continuare con lo stesso approccio dopo un fallimento</behavior>
+    <behavior>Non fare nuove assunzioni senza verifica</behavior>
+  </prohibitedBehaviors>
+
+  <examples>
+    <example type="api_error">
+      <context>Richiesta di aggiungere un file al git staging</context>
+      <action>Chiamata git_add con path "src/main/java/com/example/NewClass.java"</action>
+      <error>Error: file not found</error>
+      <correctResponse>
+        <whatIWasDoing>Stavo cercando di aggiungere NewClass.java allo staging</whatIWasDoing>
+        <whatFailed>L'API git_add è fallita perché il file non esiste</whatFailed>
+        <assumptions>Avevo assunto che il file fosse già stato creato</assumptions>
+        <requiredClarification>Prima di procedere, ho bisogno di sapere: il file deve essere creato prima o il path è errato?</requiredClarification>
+      </correctResponse>
+    </example>
+
+    <example type="application_error">
+      <context>Richiesta di aggiungere un metodo a una classe Java</context>
+      <action>Aggiunta metodo tramite class_add_content</action>
+      <error>java.lang.IllegalStateException: No such method 'getUser' in parent class</error>
+      <correctResponse>
+        <whatIWasDoing>Stavo cercando di aggiungere un metodo che usa getUser()</whatIWasDoing>
+        <whatFailed>L'operazione è fallita perché il metodo getUser() non esiste nella classe parent</whatFailed>
+        <assumptions>Avevo assunto che la gerarchia delle classi includesse questo metodo</assumptions>
+        <requiredClarification>Prima di procedere, ho bisogno di sapere: devo implementare getUser() prima o devo usare un approccio diverso per ottenere l'utente?</requiredClarification>
+      </correctResponse>
+    </example>
+  </examples>
+</errorHandlingBehavior>

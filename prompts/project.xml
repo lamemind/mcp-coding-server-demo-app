@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectSpecification>
+    <objective>
+        <title>Java EE + Quarkus Todo List Application</title>
+        <description>Sviluppare una applicazione completa di todo list</description>
+        <technologies>
+            <technology>Java EE</technology>
+            <technology>Quarkus</technology>
+            <technology>Qute</technology>
+        </technologies>
+        <components>
+            <component>Database Access Layer</component>
+            <component>REST Endpoints</component>
+            <component>User Interface (minimal but functional)</component>
+            <component>Testing Suite (unit and integration)</component>
+        </components>
+    </objective>
+
+    <resources>
+        <projectPath type="absolute">C:/local/work/clienti/lamemind/ai/mcp-coding-server-demo-app/java-app</projectPath>
+        <fileSystemAccess>
+            <rule>Utilizzare sempre il percorso assoluto per accedere al filesystem</rule>
+        </fileSystemAccess>
+    </resources>
+
+    <behavior>
+        <codeWritingPolicies>
+            <policy>Riferimento obbligatorio alla documentazione "Gestione Errori.xml"</policy>
+            <policy>Riferimento obbligatorio alla documentazione "Validazione Contesto.xml"</policy>
+        </codeWritingPolicies>
+    </behavior>
+</projectSpecification>

@@ -1,0 +1,67 @@
+<contextValidation>
+  <internalChecks>
+    <fileOperations>
+      <verify>path esiste e accessibile</verify>
+      <verify>path assoluto vs relativo corretto per contesto</verify>
+      <verify>permessi sufficienti per operazione richiesta</verify>
+    </fileOperations>
+
+    <codeAnalysis>
+      <verify>esistenza classi/metodi referenziati</verify>
+      <verify>gerarchia classi completa e accessibile</verify>
+      <verify>visibilità elementi (public/private/protected)</verify>
+      <verify>compatibilità tipi e signatures</verify>
+    </codeAnalysis>
+
+    <technologiesAndFrameworks>
+      <verify>conferma esplicita presenza nel contesto</verify>
+      <verify>versione specificata o verificabile</verify>
+      <verify>features assunte effettivamente disponibili</verify>
+    </technologiesAndFrameworks>
+
+    <dataStructures>
+      <verify>schema/struttura esplicitamente fornita</verify>
+      <verify>constraints e relazioni verificate</verify>
+      <verify>formato dati compatibile con operazioni previste</verify>
+    </dataStructures>
+
+    <environment>
+      <verify>stato sistema chiaramente definito</verify>
+      <verify>configurazioni necessarie presenti</verify>
+      <verify>dipendenze ambientali soddisfatte</verify>
+    </environment>
+  </internalChecks>
+
+  <confidenceLevels>
+    <high>
+      - Tutti i prerequisiti esplicitamente verificati
+      - Nessuna assunzione non validata
+      - Operazioni in ambiti ben definiti
+    </high>
+    <low>
+      - Presenza di assunzioni non verificabili
+      - Mancanza informazioni critiche
+      - Ambiguità nel contesto operativo
+    </low>
+  </confidenceLevels>
+
+  <actions>
+    <whenConfident>
+      Procedi con l'operazione senza interruzioni
+    </whenConfident>
+    <whenUncertain>
+      <step>Identifica informazioni mancanti critiche</step>
+      <step>Formula domanda specifica e concisa</step>
+      <step>Attendi conferma prima di procedere</step>
+    </whenUncertain>
+  </actions>
+
+  <questioningGuidelines>
+    <rule>Massimo 5 domande per messaggio</rule>
+    <rule>Raggruppa domande correlate logicamente</rule>
+    <rule>Specificità massima per ogni domanda</rule>
+    <rule>Focus su informazioni critiche mancanti</rule>
+    <rule>No domande su informazioni deducibili dal contesto</rule>
+    <rule>Ordina le domande per priorità/dipendenze</rule>
+  </questioningGuidelines>
+</contextValidation>
