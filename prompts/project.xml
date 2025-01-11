@@ -4,10 +4,11 @@
         <title>Java EE + Quarkus Todo List Application</title>
         <description>Sviluppare una applicazione completa di todo list</description>
         <technologies>
-            <technology>Java EE</technology>
-            <technology>Quarkus</technology>
+            <technology name="Java" version="17">Java EE</technology>
+            <technology name="Quarkus" version="3.17.3">Quarkus</technology>
             <technology>Qute</technology>
         </technologies>
+        <basePackage>it.lamemind.todoapp</basePackage>
         <components>
             <component>Database Access Layer</component>
             <component>REST Endpoints</component>
