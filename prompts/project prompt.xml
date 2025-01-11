@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectSpecification>
     <objective>
-        <title>Java EE + Quarkus Todo List Application</title>
-        <description>Sviluppare una applicazione completa di todo list</description>
-        <technologies>
-            <technology name="Java" version="17">Java EE</technology>
-            <technology name="Quarkus" version="3.17.3">Quarkus</technology>
-            <technology>Qute</technology>
-        </technologies>
-        <basePackage>it.lamemind.todoapp</basePackage>
-        <components>
-            <component>Database Access Layer</component>
-            <component>REST Endpoints</component>
-            <component>User Interface (minimal but functional)</component>
-            <component>Testing Suite (unit and integration)</component>
-        </components>
+        <title>Dimostrazione Claude MCP</title>
+        <description>Dimostrazione di utilizzo Claude AI con Model Context Protocol nella creazione di un progetto Java
+            EE + Quarkus e lo sviluppo di una Todo List App dimostrativa
+        </description>
+        <targetProject name="Todo List App">
+            <technologies>
+                <technology name="Java" version="17">Java EE</technology>
+                <technology name="Quarkus" version="3.17.3">Quarkus</technology>
+                <technology>Qute</technology>
+            </technologies>
+            <basePackage>it.lamemind.todoapp</basePackage>
+            <components>
+                <component driver="mysql">Database Access Layer</component>
+                <component>REST Endpoints</component>
+                <component>User Interface (minimal but functional)</component>
+                <component>Testing Suite (unit and integration)</component>
+            </components>
+        </targetProject>
     </objective>
 
     <resources>
@@ -22,6 +26,10 @@
         <fileSystemAccess>
             <rule>Utilizzare sempre il percorso assoluto per accedere al filesystem</rule>
         </fileSystemAccess>
+        <versionControl>
+            <type>Git</type>
+            <repoPath type="absolute">C:/local/work/clienti/lamemind/ai/mcp-coding-server-demo-app</repoPath>
+        </versionControl>
     </resources>
 
     <behavior>

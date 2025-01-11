@@ -1,0 +1,4 @@
+ora salviamo la conversazione corrente per pubblicarla insieme al resto del progetto
+- crea un artefatto markdown dove racchiudi per la corrente conversazione
+- fermati subito prima del presente messaggio
+- per ogni messaggio, riporta l'esatto testo integrale dell'utente e del bot
