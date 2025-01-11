@@ -10,7 +10,7 @@
                 <conversations>
                     <description>Memorizzare le conversazioni rilevanti come materiale dimostrativo del percorso seguito</description>
                     <directive referTo="extractionPrompt" />
-                    <extractionPrompt type="relative" relativeTo="projectPath">prompts/conv-extraction-prompt.txt</extractionPrompt>
+                    <extractionPrompt type="relative" relativeTo="scopePath">prompts/conv-extraction-prompt.txt</extractionPrompt>
                 </conversations>
             </demonstrativeMaterials>
             <technologies>
@@ -29,16 +29,18 @@
     </objective>
 
     <resources>
+        <scopePath type="absolute">C:/local/work/clienti/lamemind/ai/mcp-coding-server-demo-app</scopePath>
         <projectPath type="absolute">C:/local/work/clienti/lamemind/ai/mcp-coding-server-demo-app/java-app</projectPath>
         <fileSystemAccess>
             <rule>Utilizzare sempre il percorso assoluto per accedere al filesystem</rule>
         </fileSystemAccess>
             <conversationStorage>
-                <path type="relative" relativeTo="projectPath">prompts\history</path>
+                <path type="relative" relativeTo="scopePath">prompts\history</path>
             </conversationStorage>
         <versionControl>
             <type>Git</type>
-            <repoPath type="absolute">C:/local/work/clienti/lamemind/ai/mcp-coding-server-demo-app</repoPath>
+            <repoPath type="referTo" referTo="scopePath" />
+            <commitMessage alwaysPrepend="[Claude]" />
         </versionControl>
     </resources>
 
