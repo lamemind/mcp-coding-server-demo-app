@@ -80,5 +80,4 @@ Additional documentation is available in the `/docs` directory, including:
 - Development guidelines
 
 ## License
-
-[Add appropriate license]
+MIT License
