@@ -52,8 +52,8 @@
 
     <behavior>
         <codeWritingPolicies>
-            <policy>Riferimento obbligatorio alla documentazione "Gestione Errori.xml"</policy>
-            <policy>Riferimento obbligatorio alla documentazione "Validazione Contesto.xml"</policy>
+            <policy>Riferimento obbligatorio alla documentazione "error management.xml"</policy>
+            <policy>Riferimento obbligatorio alla documentazione "context validation.xml"</policy>
         </codeWritingPolicies>
     </behavior>
 </projectSpecification>
