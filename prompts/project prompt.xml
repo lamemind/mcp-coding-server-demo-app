@@ -6,6 +6,12 @@
             EE + Quarkus e lo sviluppo di una Todo List App dimostrativa
         </description>
         <targetProject name="Todo List App">
+            <demonstrativeMaterials>
+                <conversations>
+                    <description>Memorizzare le conversazioni rilevanti come materiale dimostrativo del percorso seguito</description>
+                    <extractionPrompt type="relative" relativeTo="projectPath">prompts/conv-extraction-prompt.txt</extractionPrompt>
+                </conversations>
+            </demonstrativeMaterials>
             <technologies>
                 <technology name="Java" version="17">Java EE</technology>
                 <technology name="Quarkus" version="3.17.3">Quarkus</technology>
@@ -26,6 +32,9 @@
         <fileSystemAccess>
             <rule>Utilizzare sempre il percorso assoluto per accedere al filesystem</rule>
         </fileSystemAccess>
+            <conversationStorage>
+                <path type="relative" relativeTo="projectPath">prompts\history</path>
+            </conversationStorage>
         <versionControl>
             <type>Git</type>
             <repoPath type="absolute">C:/local/work/clienti/lamemind/ai/mcp-coding-server-demo-app</repoPath>
