@@ -9,6 +9,7 @@
             <demonstrativeMaterials>
                 <conversations>
                     <description>Memorizzare le conversazioni rilevanti come materiale dimostrativo del percorso seguito</description>
+                    <directive referTo="extractionPrompt" />
                     <extractionPrompt type="relative" relativeTo="projectPath">prompts/conv-extraction-prompt.txt</extractionPrompt>
                 </conversations>
             </demonstrativeMaterials>
