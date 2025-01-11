@@ -9,8 +9,14 @@
             <demonstrativeMaterials>
                 <conversations>
                     <description>Memorizzare le conversazioni rilevanti come materiale dimostrativo del percorso seguito</description>
-                    <directive referTo="extractionPrompt" />
-                    <extractionPrompt type="relative" relativeTo="scopePath">prompts/conv-extraction-prompt.txt</extractionPrompt>
+                    <directives>
+                        <directive>Prendi la conversazione dall'inizio e fermati subito prima dell'ultimo messaggio utente</directive>
+                        <directive>per ogni messaggio, riporta l'esatto testo integrale dell'utente e del bot</directive>
+                        <directive>la conversazione deve essere in formato markdown</directive>
+                        <directive><![CDATA[il nome del file destinazione segue il seguente pattern: `<numero_conversazione_2_cifre> <titolo conversazione>.md`]]></directive>
+                        <directive>ottieni `numero_conversazione_2_cifre` facendo `directory_list` nella cartella `conversationStorage` e contando quanti file ci sono +1</directive>
+                        <directive>dopo aver scritto il file, committarlo in git</directive>
+                    </directives>
                 </conversations>
             </demonstrativeMaterials>
             <technologies>
@@ -30,7 +36,7 @@
 
     <resources>
         <scopePath type="absolute">C:/local/work/clienti/lamemind/ai/mcp-coding-server-demo-app</scopePath>
-        <projectPath type="absolute">C:/local/work/clienti/lamemind/ai/mcp-coding-server-demo-app/java-app</projectPath>
+        <projectPath type="relative" relativeTo="scopePath">java-app</projectPath>
         <fileSystemAccess>
             <rule>Utilizzare sempre il percorso assoluto per accedere al filesystem</rule>
         </fileSystemAccess>
