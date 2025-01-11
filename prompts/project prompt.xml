@@ -35,7 +35,7 @@
     </objective>
 
     <resources>
-        <scopePath type="absolute">C:/local/work/clienti/lamemind/ai/mcp-coding-server-demo-app</scopePath>
+        <scopePath type="absolute">C:/mcp-coding-server-demo-app</scopePath>
         <projectPath type="relative" relativeTo="scopePath">java-app</projectPath>
         <fileSystemAccess>
             <rule>Utilizzare sempre il percorso assoluto per accedere al filesystem</rule>
