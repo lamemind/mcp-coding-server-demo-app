@@ -40,13 +40,13 @@
         <fileSystemAccess>
             <rule>Utilizzare sempre il percorso assoluto per accedere al filesystem</rule>
         </fileSystemAccess>
-            <conversationStorage>
-                <path type="relative" relativeTo="scopePath">prompts\history</path>
-            </conversationStorage>
+        <conversationStorage>
+            <path type="relative" relativeTo="scopePath">prompts\history</path>
+        </conversationStorage>
         <versionControl>
             <type>Git</type>
-            <repoPath type="referTo" referTo="scopePath" />
-            <commitMessage alwaysPrepend="[Claude]" />
+            <repoPath type="referTo" referTo="scopePath"/>
+            <commitMessage alwaysPrepend="[Claude]"/>
         </versionControl>
     </resources>
 
