@@ -10,9 +10,9 @@
                 <conversations>
                     <description>Memorizzare le conversazioni rilevanti come materiale dimostrativo del percorso seguito</description>
                     <directives>
-                        <directive>Prendi la conversazione dall'inizio e fermati subito prima dell'ultimo messaggio utente</directive>
+                        <directive>Prendi la conversazione dall'inizio, messaggio per messaggio, tutto il contenuto</directive>
                         <directive>per ogni messaggio, riporta l'esatto testo integrale dell'utente e del bot</directive>
-                        <directive>la conversazione deve essere in formato markdown</directive>
+                        <directive>la conversazione deve essere in formato markdown, con identificazione Human e Assistant su righe separate rispetto al contenuto del messaggio</directive>
                         <directive><![CDATA[il nome del file destinazione segue il seguente pattern: `<numero_conversazione_2_cifre> <titolo conversazione>.md`]]></directive>
                         <directive>ottieni `numero_conversazione_2_cifre` facendo `directory_list` nella cartella `conversationStorage` e contando quanti file ci sono +1</directive>
                         <directive>dopo aver scritto il file, committarlo in git</directive>
